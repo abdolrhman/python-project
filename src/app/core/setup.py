@@ -25,7 +25,7 @@ from .config import (
     settings,
 )
 from .db.database import Base, async_engine as engine
-from .utils import cache, queue, rate_limit
+from .utils import cache, queue
 from ..models import *
 
 # -------------- database --------------
@@ -53,22 +53,6 @@ async def close_redis_queue_pool() -> None:
     await queue.pool.aclose()  # type: ignore
 
 
-# -------------- rate limit --------------
-async def create_redis_rate_limit_pool() -> None:
-    rate_limit.pool = redis.ConnectionPool.from_url(settings.REDIS_RATE_LIMIT_URL)
-    rate_limit.client = redis.Redis.from_pool(rate_limit.pool)  # type: ignore
-
-
-async def close_redis_rate_limit_pool() -> None:
-    await rate_limit.client.aclose()  # type: ignore
-
-
-# -------------- application --------------
-async def set_threadpool_tokens(number_of_tokens: int = 100) -> None:
-    limiter = anyio.to_thread.current_default_thread_limiter()
-    limiter.total_tokens = number_of_tokens
-
-
 def lifespan_factory(
     settings: (
         DatabaseSettings
@@ -85,7 +69,6 @@ def lifespan_factory(
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncGenerator:
-        await set_threadpool_tokens()
 
         # if isinstance(settings, DatabaseSettings) and create_tables_on_start:
         #     await create_tables()

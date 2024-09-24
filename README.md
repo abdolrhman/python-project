@@ -571,7 +571,6 @@ First, you may want to take a look at the project structure and understand what 
     │   │       ├── posts.py          # API routes for post operations.
     │   │       ├── rate_limits.py    # API routes for rate limiting functionalities.
     │   │       ├── tasks.py          # API routes for task management.
-    │   │       ├── tiers.py          # API routes for user tier functionalities.
     │   │       └── users.py          # API routes for user management.
     │   │
     │   ├── core                      # Core utilities and configurations for the application.
@@ -646,7 +645,6 @@ First, you may want to take a look at the project structure and understand what 
     └── scripts                       # Utility scripts for the application.
         ├── __init__.py
         ├── create_first_superuser.py # Script to create the first superuser.
-        └── create_first_tier.py      # Script to create the first user tier.
 ```
 
 ### 5.2 Database Model

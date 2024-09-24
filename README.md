@@ -111,11 +111,14 @@ Migration files are already pushed to the repository, so you can run the followi
 The API functionality includes CRUD operations for Product, Category, and Review, as well as user authentication. Below are example screenshots showing the creation of each entity:
 
 - **Product Creation**
+![img_3.png](img_3.png)
 - **Category Creation**
+![img_2.png](img_2.png)
 - **Review Creation**
+![img_4.png](img_4.png)
 - **User Authentication**
 ![img.png](img.png)
-
+![img_1.png](img_1.png)
 (Screenshots to be added here later)
 
 ## 8. Testing the API

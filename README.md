@@ -113,6 +113,8 @@ The API functionality includes CRUD operations for Product, Category, and Review
 - **Product Creation**
 - **Category Creation**
 - **Review Creation**
+- **User Authentication**
+![img.png](img.png)
 
 (Screenshots to be added here later)
 

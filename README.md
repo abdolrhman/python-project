@@ -1,5 +1,3 @@
-Here's the README in markdown format, specifically tailored to the project requirements:
-
 # Python Task
 A simple project for managing products, categories, and reviews using FastAPI.
 

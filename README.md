@@ -44,6 +44,7 @@ Ensure you have the following installed before starting:
 ### Environment Variables
 
 Make sure you have a `.env` file inside the `src` folder with the following variables configured:
+> You can just copy the `.env.example` file, and then it should be all good.
 
 ```env
 # Database configuration

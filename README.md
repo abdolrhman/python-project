@@ -53,10 +53,6 @@ POSTGRES_PASSWORD="your_password"
 POSTGRES_SERVER="your_server"
 POSTGRES_PORT=5432
 POSTGRES_DB="your_db"
-
-# Redis configuration
-REDIS_CACHE_HOST="localhost"
-REDIS_CACHE_PORT=6379
 ```
 
 ## 4. Running the Project with Docker
@@ -83,8 +79,7 @@ REDIS_CACHE_PORT=6379
 
 2. Start the PostgreSQL and Redis containers if you haven't already:
    ```sh
-   docker run -d -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=1234 postgres
-   docker run -d -p 6379:6379 --name redis redis:alpine
+   docker run -d -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=root root
    ```
 
 3. Run the FastAPI application:

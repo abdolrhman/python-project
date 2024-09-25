@@ -9,7 +9,6 @@ The **Python Task** project is a simplified API built with FastAPI for managing 
 - **Pydantic V2**: A Python data validation library.
 - **SQLAlchemy 2.0**: An ORM for mapping Python objects to database tables.
 - **PostgreSQL**: A relational database for storing data.
-- **Redis**: In-memory data structure store, used for caching.
 - **Uvicorn**: ASGI server for serving the FastAPI application.
 
 ## 1. Models Included
@@ -77,7 +76,7 @@ POSTGRES_DB="your_db"
    poetry install
    ```
 
-2. Start the PostgreSQL and Redis containers if you haven't already:
+2. Start the PostgreSQL container if you haven't already:
    ```sh
    docker run -d -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=root root
    ```
